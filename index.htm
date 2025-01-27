@@ -43,8 +43,8 @@
             d.innerHTML=`Diskriminant ${disk}-ə bərabərdir ,`;           
             d.innerHTML+=disk>0 ? `Musbetdir,iki koku var` : 
                         disk<0 ? `Menfidir,Həqiqi kökləri yoxdur` : `Bir koku var`;
-            let x1=(-b.value + Math.sqrt(disk))/2*a.value;
-            let x2=eval((-b.value - disk**(1/2))/2*a.value);
+            let x1=(-b.value + Math.sqrt(disk))/(2*a.value);
+            let x2=eval((-b.value - disk**(1/2))/(2*a.value));
             kokler.innerHTML=  disk>0 ? `kok1: ${x1}, kok2: ${x2} ` :
                                 disk==0 ? `kok: ${x1}`: `kok yoxdur`;     
         }
