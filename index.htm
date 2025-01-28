@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diskriminant</title>
     <style>
-        input{
+        input {
             width: 30px;
         }
-        button{
+
+        button {
             margin-left: 10px;
             margin-right: 10px;
             background-color: yellow;
             border-radius: 5px;
-            &:hover{
+
+            &:hover {
                 background-color: blueviolet;
             }
         }
     </style>
 </head>
+
 <body>
     <input type="number" id="a" />
     <span>x<sup>2</sup> +</span>
@@ -30,27 +34,28 @@
     <h2 id="d"></h2>
     <h3 id="kokler"></h3>
     <script>
-        const a=document.getElementById('a');
-        const b=document.getElementById('b');
-        const c=document.getElementById('c');
-        const d=document.getElementById('d');
+        const a = document.getElementById('a');
+        const b = document.getElementById('b');
+        const c = document.getElementById('c');
+        const d = document.getElementById('d');
 
-        function count(){
-            let disk=eval(b.value**2 -4*a.value*c.value);
-            /* d.innerHTML=`Diskriminant ${disk}-ə bərabərdir ,`+
-                        
-                            disk>0 ? `Musbetdir,bir koku var` : 
-                            disk<0 ? `Menfidir,Həqiqi kökləri yoxdur` : `Iki koku var`;*/
+        function count() {
+            let disk = eval(b.value ** 2 - 4 * a.value * c.value);
+            d.innerHTML = `Diskriminant ${disk}-ə bərabərdir ,`
 
-            d.innerHTML=`Diskriminant ${disk}-ə bərabərdir ,`;           
+            d.innerHTML += disk > 0 ? `Musbetdir,bir koku var` :
+                disk < 0 ? `Menfidir,Həqiqi kökləri yoxdur` : `Iki koku var`;
+
+            /*d.innerHTML=`Diskriminant ${disk}-ə bərabərdir ,`;           
             d.innerHTML+=disk>0 ? `Musbetdir,iki koku var` : 
                         disk<0 ? `Menfidir,Həqiqi kökləri yoxdur` : `Bir koku var`;
             let x1=(-b.value + Math.sqrt(disk))/(2*a.value);
             let x2=eval((-b.value - disk**(1/2))/(2*a.value));
             kokler.innerHTML=  disk>0 ? `kok1: ${x1}, kok2: ${x2} ` :
-                                disk==0 ? `kok: ${x1}`: `kok yoxdur`;     
+                                disk==0 ? `kok: ${x1}`: `kok yoxdur`;  */
         }
         //disk**1/2 u stepeni priorotet vise
     </script>
 </body>
+
 </html>
